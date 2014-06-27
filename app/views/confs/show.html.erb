@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Custom:</strong>
+  <%= @conf.custom %>
+</p>
+
+<p>
+  <strong>Player:</strong>
+  <%= @conf.player.id %>
+</p>
+
+<p>
+  <strong>Game:</strong>
+  <%= @conf.game.id %>
+</p>
+
+<%= link_to 'Edit', edit_conf_path(@conf) %> |
+<%= link_to 'Back', confs_path %>

@@ -1,0 +1,29 @@
+<%= form_for([@conf, @conf.params.build]) do |f| %>
+  <% if @param.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@param.errors.count, "error") %> prohibited this param from being saved:</h2>
+
+      <ul>
+      <% @param.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :value %><br>
+    <%= f.text_field :value %>
+  </div>
+  <div class="field">
+    <%= f.label :conf_id %><br>
+    <%= f.text_field :conf_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

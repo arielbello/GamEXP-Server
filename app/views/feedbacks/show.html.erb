@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @feedback.rating %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @feedback.text %>
+</p>
+
+<p>
+  <strong>Conf:</strong>
+  <%= @feedback.conf %>
+</p>
+
+<p>
+  <strong>Player:</strong>
+  <%= @feedback.player.id %>
+</p>
+
+<p>
+  <strong>Game:</strong>
+  <%= @feedback.game.id %>
+</p>
+
+<%= link_to 'Edit', edit_feedback_path(@feedback) %> |
+<%= link_to 'Back', feedbacks_path %>

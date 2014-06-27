@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gamexp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+
+<br>
+<p><strong>Params Hash:</strong></p>
+<p><%= params.inspect %></p>
+<br>
+<p><strong>Session Hash:</strong></p>
+<p><%= session[:session_id] %></p>
+
+</body>
+</html>

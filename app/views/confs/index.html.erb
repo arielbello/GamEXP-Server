@@ -1,0 +1,29 @@
+<h1>Listing confs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Custom</th>
+      <th>Player</th>
+      <th>Game</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @confs.each do |conf| %>
+      <tr>
+        <td><%= conf.custom %></td>
+        <td><%= conf.player %></td>
+        <td><%= conf.game %></td>
+        <td><%= link_to 'Show', conf %></td>
+        <td><%= link_to 'Edit', edit_conf_path(conf) %></td>
+        <td><%= link_to 'Destroy', conf, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Conf', new_conf_path %>
